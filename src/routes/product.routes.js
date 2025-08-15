@@ -8,8 +8,9 @@
 //     app.put('/update-product/:id' , updateProduct)
 // }
 
-import {getProductMCBuyer} from '../controllers/product.controller.js'
+import {getProductMCBuyer, getProductMCBuyerByOne} from '../controllers/product.controller.js'
 
 export default (app) => {
     app.get('/get-product', getProductMCBuyer )
+    app.get('/get-product-one', getProductMCBuyerByOne )
 }
