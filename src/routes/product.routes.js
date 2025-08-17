@@ -11,6 +11,6 @@
 import {getProductMCBuyer, getProductMCBuyerByOne} from '../controllers/product.controller.js'
 
 export default (app) => {
-    app.get('/get-product', getProductMCBuyer )
-    app.get('/get-product-one', getProductMCBuyerByOne )
+    app.get('/get-product', getProductMCBuyer)
+    app.get('/get-product-one/:id', getProductMCBuyerByOne)
 }

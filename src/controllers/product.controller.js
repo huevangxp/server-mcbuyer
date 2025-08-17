@@ -58,9 +58,11 @@ export const getProductMCBuyer = async (req, res) => {
 };
 export const getProductMCBuyerByOne = async (req, res) => {
     try {
-        const {lang, productUrl } = req.query;
+        const {id} = req.params;
+console.log(id)
+        const {lang } = req.query;
         const response = await axios.get(
-            'https://www.mcbuyer.la/api/front/product?productUrl=https://item.taobao.com/item.htm?id=885863573499',
+            `https://www.mcbuyer.la/api/front/product?productUrl=https://item.taobao.com/item.htm?id=${id}`,
             {
                 headers: {
                     'Accept': 'application/json',
